@@ -34,6 +34,7 @@ public class ProjectController {
 		ProjectManagementVO vo = service.selectByNo(no);
 		model.addAttribute("ProjectManagementVO", vo);
 	}
+	
 
 	@RequestMapping(value = "register", method = RequestMethod.GET)
 	public void registGet() {
