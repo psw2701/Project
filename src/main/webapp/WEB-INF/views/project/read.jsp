@@ -25,13 +25,13 @@
 					</div>
 					<div class="form-group">
 						<label>시작날짜</label>
-						<input type="text" name="start_date" class="form-control" placeholder="Enter Writer" value="${ProjectManagementVO.start_date }" readonly="readonly">
+						<input type="text" name="start_date" class="form-control" placeholder="Enter Writer" value="<fmt:formatDate value="${ProjectManagementVO.start_date}" pattern="yyyy-MM-dd"/>" readonly="readonly">
 					</div>
 					<div class="form-group">
 						<label>종료날짜</label>
 						<%-- <fmt:parseDate value="${ProjectManagementVO.end_date}" var="end" pattern="yyyy-MM-dd"/>
 					<fmt:formatDate var="viewEndDate" value="${end}" pattern="yyyy-MM-dd"/> --%>
-					<input type="text" name="end_date" class="form-control" placeholder="Enter Title" value="${ProjectManagementVO.end_date }" readonly="readonly">
+					<input type="text" name="end_date" class="form-control" placeholder="Enter Title" value="<fmt:formatDate value="${ProjectManagementVO.end_date}" pattern="yyyy-MM-dd"/>" readonly="readonly">
 					</div>
 					<div class="form-group">
 						<label>상태</label>

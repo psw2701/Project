@@ -7,9 +7,7 @@
 	<insert id="insert"  parameterType="ProjectManagementVO">
 		insert into ProjectManagement (no , name, content,start_date, end_date,  progress) 
 		values (#{no},#{name},#{content},#{start_date},#{end_date},#{progress})
-	</insert>
-	
-	
+	</insert>	
 	
 	<select id="list" resultType="ProjectManagementVO">
 		select * from ProjectManagement order by no desc
@@ -31,3 +29,4 @@
 		where no=#{no}
 	</update>
 </mapper>
+

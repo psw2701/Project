@@ -26,11 +26,11 @@
 					</div>
 					<div class="form-group">
 						<label>시작날짜</label>
-						<input type="text" name="start_date" id="datepickerStart" class="form-control" placeholder="${ProjectManagementVO.start_date }">
+						<input type="text" name="start_date" id="datepickerStart" class="form-control" value="<fmt:formatDate value="${ProjectManagementVO.start_date}" pattern="yyyy-MM-dd"/>">
 					</div>
 					<div class="form-group">
 						<label>종료날짜</label>
-						<input type="text" name="end_date" id="datepickerEnd" class="form-control" placeholder="${ProjectManagementVO.end_date }" >
+						<input type="text" name="end_date" id="datepickerEnd" class="form-control" placeholder="${ProjectManagementVO.end_date }" value="<fmt:formatDate value="${ProjectManagementVO.end_date}" pattern="yyyy-MM-dd"/>" >
 					</div>
 					<div class="form-group">
 						<label>상태</label>
@@ -64,8 +64,10 @@
   $( function() {
     $( "#datepickerStart" ).datepicker();
     $( "#datepickerStart" ).datepicker("option", "dateFormat", "yy-mm-dd");
+    $( "#datepickerStart" ).val('<fmt:formatDate value="${ProjectManagementVO.start_date}" pattern="yyyy-MM-dd"/>');
     $( "#datepickerEnd" ).datepicker();
     $( "#datepickerEnd" ).datepicker("option", "dateFormat", "yy-mm-dd");
+    $( "#datepickerEnd" ).val('<fmt:formatDate value="${ProjectManagementVO.end_date}" pattern="yyyy-MM-dd"/>');
   } );
   </script>
 
