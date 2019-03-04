@@ -59,7 +59,7 @@
 		</div>
 	</div>
 </section>
-<script>  
+<script>   
 	
 	$(function() {
 		$("#btnList").click(function() {
