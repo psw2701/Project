@@ -68,8 +68,11 @@
 		})
 		$("#btnRemove").click(function() {
 			//#f1(form)를 submit 보냄
-			$("#f1").attr("action", "remove");
-			$("#f1").submit();
+			if(confirm("정말로 삭제하시겠습니까?")){
+				$("#f1").attr("action", "remove");
+				$("#f1").submit();
+			}
+			
 
 		})
 		$("#btnModify").click(function() {
